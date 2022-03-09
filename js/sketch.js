@@ -2,11 +2,11 @@ let doorClosed, doorOpened;
 let doorState = "CLOSED";
 let doorCloseSound = new Tone.MonoSynth(
   {
-    "modulationEnvelope": {
-      "attack": 0.01,
-      "decay": 0,
-      "sustain": 0,
-      "release": 1
+    envelope: {
+      attack: 0.01,
+      decay: 1,
+      sustain: 1,
+      release: 0.5
     }
 });
 
@@ -20,11 +20,11 @@ let doorCloseSoundEffect = new Tone.AutoPanner(
 
 let doorOpenSound = new Tone.AMSynth(
   {
-    "envelope": {
-      "attack": 0.006,
-      "decay": 4,
-      "sustain": 0.04,
-      "release": 1.2
+    envelope: {
+      attack: 0.006,
+      decay: 4,
+      sustain: 0.04,
+      release: 1.2
     }
 });
 
